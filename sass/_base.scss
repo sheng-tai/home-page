@@ -1,0 +1,28 @@
+// Color
+
+$color-main: #e74c3c;
+$color-main-light: #e67e22;
+$color-main-dark-1: #d35400;
+$color-main-dark-2: #c0392b;
+$color-btn-color-1: #131418;
+
+$color-bgc-1: hsl(0, 0%, 95%);
+
+//--------------------------------------------
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lato',微軟正黑體 ,sans-serif;
+    padding: 3rem;
+}

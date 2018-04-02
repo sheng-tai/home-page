@@ -1,0 +1,25 @@
+.heading__primary {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    align-items: center;
+    text-transform: uppercase;
+    line-height: 6rem;
+
+    &--main {
+        letter-spacing: .5rem;
+        font-size: 5rem;
+        font-weight: 400;
+        animation: moveLeftIn 1.5s ease-out;
+    }
+
+    &--sub {
+        font-size: 2rem;
+        letter-spacing: .5rem;
+        animation: moveRightIn 1.5s ease-out;
+    }
+}
+
+.heading__secondary {
+    
+}
