@@ -1,0 +1,48 @@
+.portfolio {
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        flex: 0 0 28%;
+        margin-top: 8rem;
+        box-shadow: 0 2rem 6rem rgba(0, 0, 0, .4);
+        border-radius: 3px;
+        overflow: hidden;
+        background-color: #fff;
+        transition: .3s;
+        
+        &:hover {
+            transform: translateX(-5px) translateY(-5px) scale(1.05);
+            box-shadow: 0 3rem 8rem rgba(0, 0, 0, .4);
+        }
+    }
+
+    &__photo {
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: $color-small-text;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgb(241, 241, 241);
+    }
+
+    &__content {
+        padding: 2rem;
+    }
+
+}

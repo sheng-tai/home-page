@@ -1,3 +1,14 @@
+@mixin btn($color) {
+    
+        background-color: $color;
+        color: #fff;
+        &::after {
+            content: "";
+            background-color: $color;
+        }
+
+}
+
 .btn {
     &,
     &:link,
@@ -14,6 +25,7 @@
          transition: .2s;
          font-weight: 700;
          position: relative;
+          backface-visibility: hidden;
     }
 
     &:hover {
@@ -21,7 +33,7 @@
         box-shadow: 0 2rem 6rem rgba(0, 0, 0, .4);
 
         &::after {
-            transform: scale(1.8);
+            transform: scaleY(1.4) scaleX(1.8);
             opacity: 0;
         }
     }
@@ -39,7 +51,7 @@
         border-radius: 10rem;
         z-index: -1;
         transition: all .4s;
-        background-color: #fff;
+        // background-color: #fff;
         position: absolute;
         top: 0;
         left: 0;
@@ -48,11 +60,35 @@
     &--white {
         background-color: #fff;
         color: $color-btn-color-1;
+
+        &::after {
+            content: "";
+             background-color: #fff;
+        }
     }
     
-
     &--animated {
         animation: moveUpIn 1s ease-in 1s;
         animation-fill-mode: backwards;
     }
+
+    &--blue {
+         @include btn($color-blue-dark);
+    }
+
+     &--orange {
+         @include btn($color-yellow-dark);
+     }
+
+     &--pinkred {
+         @include btn($color-pinkred);
+     }
+
+     &--green {
+         @include btn($color-green-dark);
+     }
+
+     &--darkorange {
+         @include btn($color-main-dark-2);
+     }
 }

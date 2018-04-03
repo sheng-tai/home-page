@@ -1,0 +1,63 @@
+@mixin val($w) {
+    height: 100%;
+    width: $w;
+    background-image: linear-gradient(to right, $color-main-light, $color-main-dark-2);
+    border-radius: 100rem;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: skewY(10deg);
+
+    &__container {
+        display: flex;
+    }
+
+    &__list {
+        list-style: none;
+        font-size: 2.5rem;
+        padding: 5rem;
+    }
+
+    &__item {
+         margin-bottom: 3rem;
+         display: flex;
+         justify-content: space-between;
+    }
+
+    &__bar {
+        border: 3px solid $color-main;
+        width: 20rem;
+        border-radius: 100rem;
+        margin-left: 5rem;
+    }
+}
+
+.val {
+
+    &--80 {
+        @include val(80%);
+    }
+
+    &--60 {
+        @include val(60%);
+    }
+
+    &--50 {
+        @include val(50%);
+    }
+
+    &--40 {
+        @include val(40%);
+    }
+
+    &--30 {
+        @include val(30%);
+    }
+
+    &--20 {
+        @include val(20%);
+    }
+}

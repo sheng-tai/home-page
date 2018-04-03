@@ -4,11 +4,13 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
+        title Yuoo
         link(rel="stylesheet", href="./css/style.css")
         link(href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900", rel="stylesheet")
     body
     main
+        //- nav start
+        
         //- header start
         header.header
             .header__textbox
@@ -19,23 +21,145 @@ html(lang="en")
         //- header end
 
         //- about start
-        .about
-            .about__title
-                h2.heading__secondary about
-            .about__container
-                .about__right
-                    img(src="./img/me1.jpg", alt="me1").about__photo-1
-                    img(src="./img/me2.jpg", alt="me2").about__photo-2
-                    img(src="./img/me3.jpg", alt="me3").about__photo-3
-                .about__left
-                    p.about__content Hello!你好，我是陳昇泰，出生於高雄，現居高雄。
-                    br
-                    | 我21歲，目前正就讀國立高雄科技大學(原第一科技大學)，興趣是網頁的開發和跳舞，在學期間參與了許多的社團活動，擔任過活動的負責人、主持人、器材等等，期間讓我學習到如何有效率地進行團隊的分工和溝通。
-                    br
-                    | 我個性非常喜歡探險、挑戰自我而且有極大的行動力，曾經騎著腳踏車環繞台灣一圈看見了許多不同的景色，也曾經挑戰過高空彈跳、飛行傘，環島一趟後讓我更認識自己，也感到非常的驕傲。
-                    br
-                    | 網頁開發是我的興趣也是夢想，每次寫出網頁或完成很酷的特效，都會讓我非常的有成就感和高興，所以當決定要朝這方向邁進後，就開始從學校的資源到線上的教學努力學習，參與過一些線上的課程、也會從Github上觀看其他人的程式碼同時參加一些相關的社群，這些都讓我學習到很多，目前較著重於網頁的前端，而我對自己的期許是在10年內能達成專業的全端開發者。
-                
+        section.section-about
+            .about
+                .about__title
+                    .heading__secondary
+                        h2.heading__secondary--main about
+                        span.heading__secondary--sub 關於我
+                .about__container
+                    .about__bottom
+                        .about__photo
+                            .about__photo--1 &nbsp;
+                            .about__photo--2 &nbsp;
+                            .about__photo--3 &nbsp;
+                            .about__photo--4 &nbsp;
+                    .about__top
+                        p.about__content Hello!你好，我是陳昇泰，出生於高雄，現居高雄。
+                        
+                        p.about__content 我21歲，目前正就讀國立高雄科技大學(原第一科技大學)資訊管理系，興趣是網頁的開發和跳舞，在學期間參與了許多的社團活動，擔任過活動的負責人、主持人、器材管理等等，期間讓我學習到如何有效率地進行團隊的分工和溝通。
+                        
+                        p.about__content 我喜歡探險、挑戰自我而且具有極大的行動力，曾經騎著腳踏車環繞台灣一圈看見了許多不同的景色，也曾經挑戰過高空彈跳、飛行傘，這些事情都讓我更加認識自己，也感到非常的驕傲。
+                        
+                        pp.about__content 網頁開發是我的興趣也是夢想，每次寫出網頁或完成很酷的特效，都會讓我非常的有成就感和快樂，所以當決定要朝這方向邁進後，就開始從學校的資源到線上的教學努力學習，參與過一些線上的課程、也會從Github上觀看其他人的程式碼同時參加一些相關的社群，這些都讓我學習到很多，目前較著重於網頁的前端開發，而我對自己的期許是在10年內能達成專業的全端開發者。
+        //- about end
+        //- skill start
+        section.section-skill
+            .skill
+                .skill__title
+                    .heading__secondary
+                        h2.heading__secondary--main skill
+                        span.heading__secondary--sub 專業技能
+                .skill__container
+                    ul.skill__list
+                        li.skill__item Html
+                            .skill__bar
+                                .val--80
+                        li.skill__item Css
+                            .skill__bar
+                                .val--80
+                        li.skill__item JavaScript
+                            .skill__bar
+                                .val--50
+                        li.skill__item jQuery
+                            .skill__bar
+                                .val--60
+                        li.skill__item Ajax
+                            .skill__bar
+                                .val--40
+                    ul.skill__list
+                        li.skill__item Pug
+                            .skill__bar
+                                .val--60
+                        li.skill__item Scss
+                            .skill__bar
+                                .val--80
+                        li.skill__item Git
+                            .skill__bar
+                                .val--30
+                        li.skill__item Vue
+                            .skill__bar
+                                .val--20
+        //- skill end
+        //- portfolio and practice start
+        section.section-portfolio
+            .portfolio
+                .portfolio__title
+                    .heading__secondary
+                        h2.heading__secondary--main portfolio and practice
+                        span.heading__secondary--sub 作品與練習
+                .portfolio__container
+                    .portfolio__box
+                        .portfolio__pic
+                            img(src="./img/project1.jpg", alt="p1").portfolio__photo
+                        .portfolio__content
+                            h3.heading__third YA!SEE
+                            ul.portfolio__list
+                                li.portfolio__item 大學專題作品
+                                li.portfolio__item 製作中
+                                li.portfolio__item 使用Html、Scss、Ajax、jQuery、googleAPI
+                                li.portfolio__item ajax搜尋json查找到攤販位置、前端畫面製作
+                            a(href="#").btn.btn--orange 瀏覽
+                    .portfolio__box
+                        .portfolio__pic
+                            img(src="./img/project2.jpg", alt="p2").portfolio__photo
+                        .portfolio__content
+                            h3.heading__third Trillo
+                            ul.portfolio__list
+                                li.portfolio__item 課程練習作品
+                                li.portfolio__item 完成
+                                li.portfolio__item 使用Html、Scss製作
+                                li.portfolio__item 畫面製作
+                            a(href="#").btn.btn--pinkred 瀏覽
+                    .portfolio__box
+                        .portfolio__pic
+                            img(src="./img/project3.jpg", alt="p3").portfolio__photo
+                        .portfolio__content
+                            h3.heading__third Budgety
+                            ul.portfolio__list
+                                li.portfolio__item 課程練習作品
+                                li.portfolio__item 完成
+                                li.portfolio__item 使用JavaScript
+                                li.portfolio__item js計算、顯示
+                            a(href="#").btn.btn--green 瀏覽
+                    .portfolio__box
+                        .portfolio__pic
+                            img(src="./img/project4.jpg", alt="p1").portfolio__photo
+                        .portfolio__content
+                            h3.heading__third omnifood
+                            ul.portfolio__list
+                                li.portfolio__item 課程練習作品
+                                li.portfolio__item 完成
+                                li.portfolio__item 使用Html、Css、jQuery
+                                li.portfolio__item 畫面製作
+                            a(href="#").btn.btn--darkorange 瀏覽
+                    .portfolio__box
+                        .portfolio__pic
+                            img(src="./img/project5.jpg", alt="p5").portfolio__photo
+                        .portfolio__content
+                            h3.heading__third CodePen
+                            ul.portfolio__list
+                                li.portfolio__item 個人CodePen
+                                li.portfolio__item 持續更新中
+                                li.portfolio__item 使用所有工具
+                                li.portfolio__item 練習所有前端工具完成小專題
+                            a(href="#").btn.btn--blue 瀏覽
+        //- portfolio and practice end
+        footer.footer
+            .footer__title
+                h2 contact
+            .footer__box
+                svg.icon.icon__github
+                    use(xlink:href="./img/sprite.svg#icon-github")
+                a(href="https://github.com/yuoo00", target="_blank").footer__link.footer__link--github github
+            .footer__box
+                svg.icon.icon__facebook
+                    use(xlink:href="./img/sprite.svg#icon-facebook")
+                a(href="https://www.facebook.com/profile.php?id=100000612690305&ref=bookmarks", target="_blank").footer__link.footer__link--facebook facebook
+            .footer__box
+                svg.icon.icon__gmail
+                    use(xlink:href="./img/sprite.svg#icon-gmail")
+                a(href="mailto:yuoo1580@gmail.com", target="_blank").footer__link.footer__link--gmail gmail    
 
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")

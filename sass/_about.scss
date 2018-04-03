@@ -1,0 +1,90 @@
+@mixin photo {
+     padding: 10rem;
+     height: 20%;
+     display: block;
+     background-size: cover;
+     border-radius: 3px;
+     box-shadow: 0 0 2rem rgba(0, 0, 0, .4);
+     transition: .5s;
+
+     &:hover {
+        transform: scale(1.1) translateY(-10px);
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .4);
+     }
+}
+
+.about {
+    overflow: hidden;
+
+    &__container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    &__top {
+        padding: 5rem;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        line-height: 3rem;
+    }
+
+    &__content {
+        margin-bottom: 2rem;
+    }
+
+    &__bottom {
+        position: relative;
+        display: flex;
+        padding: 5rem;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    &__photo {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        &--1 {
+            @include photo;
+            background-image: linear-gradient(to right bottom, $color-main-light, $color-main-dark-1), url("../img/me1.jpg");
+            background-blend-mode: soft-light;
+
+            &:hover {
+                background-image: url("../img/me1.jpg");
+            }
+        }
+
+        &--2 {
+            @include photo;
+            background-image: linear-gradient(to right bottom, $color-blue-light, $color-blue-dark),
+            url("../img/me2.jpg");
+            background-blend-mode: soft-light;
+
+            &:hover {
+                background-image: url("../img/me2.jpg");
+            }
+        }
+
+        &--3 {
+            @include photo;
+             background-image: linear-gradient(to right bottom, $color-green-light, $color-green-dark), url("../img/me3.jpg");
+             background-blend-mode: soft-light;
+
+             &:hover {
+                 background-image: url("../img/me3.jpg");
+             }
+        }
+
+        &--4 {
+            @include photo;
+            background-image: linear-gradient(to right bottom, $color-yellow-light, $color-yellow-dark),
+            url("../img/me4.jpg");
+            background-blend-mode: soft-light;
+
+            &:hover {
+                background-image: url("../img/me4.jpg");
+            }
+        }
+    }
+}

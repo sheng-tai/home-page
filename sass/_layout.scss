@@ -1,7 +1,81 @@
-.about {
+.section-about {
     background-color: $color-bgc-1;
     padding-top: 20vh;
+    padding-bottom: 20rem;
     margin-top: -20vh;
-    //test
-    height: 50rem;
+}
+
+.section-skill {
+    padding-top: 5rem;
+    background-image : linear-gradient(to right bottom, rgba($color-yellow-light, 0.8), rgba($color-yellow-dark, 0.8)),
+    url("../img/skill-img.jpg");
+    background-size: cover;
+    background-blend-mode: color-dodge;
+    padding-bottom: 15rem;
+    margin-top: -15rem;
+
+    transform: skewY(-10deg);
+}
+
+.section-portfolio {
+    padding-top: 20rem;
+    margin-top: -10rem;
+    background-color: $color-bgc-1;
+    padding-bottom: 10rem;
+}
+
+.footer {
+    background-image: linear-gradient(105deg, rgba(#fff, .8) 50%, transparent 50%), url("../img/footer.jpg");
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem;
+    padding-left: 20rem;
+
+    &__box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-left: 5rem;
+            text-decoration: none;
+            color: $color-footer;
+            border-bottom: 1px solid currentColor;
+            padding-bottom: .5rem;
+            transition: .2s;
+        }
+
+        &:hover {
+            transform: translateY(-8px);
+        }
+
+        &:active {
+            transform: translateY(-4px);
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        
+        & h2 {
+            font-size: 3.8rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            background-image: linear-gradient(to right, $color-main, $color-main-dark-2);
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            margin-bottom: 5rem;
+            letter-spacing: 2px;
+        }
+    }
 }
