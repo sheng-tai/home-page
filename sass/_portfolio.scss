@@ -4,13 +4,26 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+
+        @include respond(small) {
+            flex-direction: column;
+            padding: 1rem 10rem;
+        }
+
+        @include respond(small-2) {
+            padding: 1rem 5rem;
+        }
+
+        @include respond(smaller) {
+            padding: 1rem;
+        }
     }
 
     &__box {
         display: flex;
         flex-direction: column;
         text-align: center;
-        flex: 0 0 28%;
+        flex: 0 0 35%;
         margin-top: 8rem;
         box-shadow: 0 2rem 6rem rgba(0, 0, 0, .4);
         border-radius: 3px;
@@ -21,6 +34,11 @@
         &:hover {
             transform: translateX(-5px) translateY(-5px) scale(1.05);
             box-shadow: 0 3rem 8rem rgba(0, 0, 0, .4);
+        }
+
+        @include respond(small) {
+            flex: 1;
+            margin-top: 3rem;
         }
     }
 

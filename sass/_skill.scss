@@ -11,6 +11,10 @@
     align-items: center;
     transform: skewY(10deg);
 
+    @include respond(small-2) {
+        transform: skewY(5deg);
+    }
+
     &__container {
         display: flex;
     }
@@ -21,6 +25,11 @@
         font-weight: 400i;
         padding: 5rem;
         letter-spacing: 1px;
+
+        @include respond(medium-2) {
+            font-size: 1.8rem;
+            padding: 2rem;
+        }
     }
 
     &__item {
@@ -34,6 +43,20 @@
         width: 20rem;
         border-radius: 100rem;
         margin-left: 5rem;
+
+        @include respond(medium) {
+            width: 15rem;
+        }
+
+        @include respond(medium-2) {
+            width: 8rem;
+            margin-left: 1rem;
+        }
+
+        @include respond(smaller) {
+            width: 5rem;
+            margin-left: .5rem;
+        }
     }
 }
 

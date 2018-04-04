@@ -4,3 +4,34 @@
     justify-content: center;
     align-items: center;
 }
+
+
+
+@mixin respond($brakepoint) {
+    // 1000px
+    @if $brakepoint== large {
+        @media screen and (max-width: 62.5em) {  @content }    
+    };
+    // 755px
+    @if $brakepoint== medium {
+        @media screen and (max-width: 47.1875em) {  @content }
+    };
+
+    // 600px
+    @if $brakepoint==medium-2 {
+        @media screen and (max-width: 37.5em) { @content }
+    };
+    // 500px
+    @if $brakepoint==small {
+        @media screen and (max-width: 31.25em) {    @content} 
+    };
+    // 420px
+    @if $brakepoint==small-2 {
+        @media screen and (max-width: 26.25em) { @content}
+    };
+
+    @if $brakepoint==smaller {
+        @media screen and (max-width: 18.75em) { @content }
+    };
+
+}

@@ -11,6 +11,19 @@
         transform: scale(1.1) translateY(-10px);
         box-shadow: 0 1rem 3rem rgba(0, 0, 0, .4);
      }
+
+     @include respond(medium) {
+        padding: 8rem;
+     }
+
+     @include respond(medium-2) {
+         padding: 5rem;
+     }
+
+     @include respond(small-2) {
+         padding: 5rem;
+         flex: 40%;
+     }
 }
 
 .about {
@@ -22,14 +35,28 @@
     }
 
     &__top {
-        padding: 5rem;
+        padding: 4rem;
         font-size: 1.8rem;
         letter-spacing: 1px;
         line-height: 3rem;
+
+        @include respond(small) {
+            padding: 3rem;
+        }
+
+         @include respond(smaller) {
+             padding: 2rem;
+             line-height: 2.5rem;
+             font-size: 1.4rem;;
+         }
     }
 
     &__content {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+
+         @include respond(smaller) {
+             margin-bottom: 0;
+         }
     }
 
     &__bottom {
@@ -38,12 +65,27 @@
         padding: 5rem;
         justify-content: center;
         align-items: baseline;
+
+        @include respond(medium) {
+            padding: 3rem;
+        }
+
+         @include respond(smaller) {
+             padding-top: 1rem;
+         }
+
     }
 
     &__photo {
         display: flex;
         justify-content: space-between;
         width: 100%;
+
+         @include respond(small-2) {
+             margin: 2rem;
+             flex-wrap: wrap;
+         }
+
 
         &--1 {
             @include photo;

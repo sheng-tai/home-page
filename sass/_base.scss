@@ -35,9 +35,25 @@ $color-small-text: rgba(167, 167, 167, 0.95);
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @include respond(large) {
+        font-size: 50%;
+    }
+
+    @include respond(small) {
+        font-size: 37.5%;
+    }
+
+    @include respond(smaller) {
+        font-size: 25%;
+    }
 }
 
 body {
     font-family: 'Lato',微軟正黑體 ,sans-serif;
     padding: 3rem;
+
+    @include respond(medium) {
+        padding: 0;
+    }
 }

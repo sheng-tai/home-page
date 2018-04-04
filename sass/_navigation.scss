@@ -1,5 +1,5 @@
 .navigation {
-    position: relative;
+    
     &__circle {
         width: 5rem;
         height: 5rem;
@@ -12,6 +12,11 @@
         animation: rotate 5s linear infinite alternate;
         box-shadow: 0 0 1rem rgba(0,0,0, .4);
         transition: .2s;
+
+        @include respond(small) {
+            top: 2rem;
+            right: 2rem;
+        }
 
         &:hover {
             top: 4.4rem;
@@ -33,6 +38,8 @@
         left: 0;
         z-index: 200;
         display: none;
+        margin: 0;
+        padding: 0;
     }
 
     &__list {
@@ -58,6 +65,14 @@
            background-image: linear-gradient(to right bottom, transparent 50%, $color-main 50%);
             background-position: 100%;
         }
+
+        @include respond(small) {
+            margin-bottom: 1rem;
+        }
+
+        @include respond(small-2) {
+            padding: .5rem;
+        }
     }
 
     &__item:hover &__link {
@@ -75,6 +90,14 @@
             transition: .2s;
             position: relative;
             opacity: 1;
+
+            @include respond(small) {
+                font-size: 3rem;
+            }
+
+            @include respond(small-2) {
+                font-size: 2.5rem;
+            }
         }
         
     }

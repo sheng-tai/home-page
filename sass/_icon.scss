@@ -5,6 +5,11 @@
     width: 5rem;
     height: 5rem;
 
+    @include respond(small-2) {
+        width: 3rem;
+        height: 3rem;
+    }
+
     &--small {
         margin: 0;
         padding: 0;

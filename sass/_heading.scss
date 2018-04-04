@@ -6,17 +6,39 @@
     text-transform: uppercase;
     line-height: 6rem;
 
+    @include respond(small) {
+        line-height: 4rem;
+    }
+
     &--main {
         letter-spacing: .5rem;
         font-size: 5rem;
         font-weight: 400;
         animation: moveLeftIn 1.5s ease-out;
+
+        @include respond(medium) {
+            font-size: 4rem;
+        }
+
+        @include respond(small-2) {
+            font-size: 2.5rem;
+        }
+        
     }
 
     &--sub {
         font-size: 2rem;
         letter-spacing: .5rem;
         animation: moveRightIn 1.5s ease-out;
+
+        @include respond(small-2) {
+            font-size: 1rem;
+            letter-spacing: .2rem;
+        }
+
+         @include respond(smaller) {
+             font-size: .8rem;
+         }
     }
 }
 
@@ -37,6 +59,10 @@
         background-clip: text;
         transition: .5s;
         letter-spacing: 1px;
+
+        @include respond(small) {
+            font-size: 3rem;
+        }
 
         &::after {
             content: "";
