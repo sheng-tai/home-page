@@ -28,6 +28,10 @@ $color-small-text: rgba(167, 167, 167, 0.95);
     box-sizing: inherit;
 }
 
+*:focus {
+    outline: none;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;

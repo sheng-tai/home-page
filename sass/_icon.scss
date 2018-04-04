@@ -4,4 +4,31 @@
     display: inline-block;
     width: 5rem;
     height: 5rem;
+
+    &--small {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    &__menu {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.footer__link--github:hover + .icon__github {
+    animation: bouns 1s infinite linear;
+}
+
+.footer__link--facebook:hover+.icon__facebook {
+    animation: bouns 1s infinite linear;
+}
+
+.footer__link--gmail:hover+.icon__gmail {
+    animation: bouns 1s infinite linear;
 }

@@ -10,18 +10,38 @@ html(lang="en")
     body
     main
         //- nav start
-        
+        .navigation
+            .navigation__circle#menu
+                svg.icon--small.icon__menu
+                    use(xlink:href="./img/sprite.svg#icon-menu")#icon_bar
+            nav.navigation__nav#nav
+                .bg-video
+                    video(autoplay, muted, loop).bg-video__content
+                        source(src="./img/pencil_down.mp4", type="video/mp4")
+                        source(src="./img/pencil_down.webm", type="video/webm")
+                ul.navigation__list
+                    li.navigation__item
+                        a(href="#header").navigation__link 01 Top of page
+                    li.navigation__item
+                        a(href="#about").navigation__link 02 About
+                    li.navigation__item
+                        a(href="#skill").navigation__link 03 Skill
+                    li.navigation__item
+                        a(href="#portfolio").navigation__link 04 Portfolio and Practice
+                    li.navigation__item
+                        a(href="#contact").navigation__link 05 Contact
+        //- nav end
         //- header start
-        header.header
+        header.header#header
             .header__textbox
                 .heading__primary
                     h1.heading__primary--main Hi! welcom my website
                     span.heading__primary--sub I want to be a pro web developer
-                    a(href="#").btn.btn--white.btn--animated look more
+                    a(href="#about").btn.btn--white.btn--animated see more
         //- header end
 
         //- about start
-        section.section-about
+        section.section-about#about
             .about
                 .about__title
                     .heading__secondary
@@ -44,7 +64,7 @@ html(lang="en")
                         pp.about__content 網頁開發是我的興趣也是夢想，每次寫出網頁或完成很酷的特效，都會讓我非常的有成就感和快樂，所以當決定要朝這方向邁進後，就開始從學校的資源到線上的教學努力學習，參與過一些線上的課程、也會從Github上觀看其他人的程式碼同時參加一些相關的社群，這些都讓我學習到很多，目前較著重於網頁的前端開發，而我對自己的期許是在10年內能達成專業的全端開發者。
         //- about end
         //- skill start
-        section.section-skill
+        section.section-skill#skill
             .skill
                 .skill__title
                     .heading__secondary
@@ -82,7 +102,7 @@ html(lang="en")
                                 .val--20
         //- skill end
         //- portfolio and practice start
-        section.section-portfolio
+        section.section-portfolio#portfolio
             .portfolio
                 .portfolio__title
                     .heading__secondary
@@ -145,22 +165,24 @@ html(lang="en")
                                 li.portfolio__item 練習所有前端工具完成小專題
                             a(href="#").btn.btn--blue 瀏覽
         //- portfolio and practice end
-        footer.footer
+        //- contact start
+        footer.footer#contact
             .footer__title
                 h2 contact
             .footer__box
+                a(href="https://github.com/yuoo00", target="_blank").footer__link.footer__link--github github
                 svg.icon.icon__github
                     use(xlink:href="./img/sprite.svg#icon-github")
-                a(href="https://github.com/yuoo00", target="_blank").footer__link.footer__link--github github
             .footer__box
+                a(href="https://www.facebook.com/profile.php?id=100000612690305&ref=bookmarks", target="_blank").footer__link.footer__link--facebook facebook
                 svg.icon.icon__facebook
                     use(xlink:href="./img/sprite.svg#icon-facebook")
-                a(href="https://www.facebook.com/profile.php?id=100000612690305&ref=bookmarks", target="_blank").footer__link.footer__link--facebook facebook
             .footer__box
+                a(href="mailto:yuoo1580@gmail.com", target="_blank").footer__link.footer__link--gmail gmail    
                 svg.icon.icon__gmail
                     use(xlink:href="./img/sprite.svg#icon-gmail")
-                a(href="mailto:yuoo1580@gmail.com", target="_blank").footer__link.footer__link--gmail gmail    
 
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="./js/app.js")
     

@@ -36,6 +36,8 @@
 
     &__box {
         display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
         align-items: center;
         margin-bottom: 5rem;
     }
@@ -55,6 +57,7 @@
 
         &:hover {
             transform: translateY(-8px);
+            color: $color-main;
         }
 
         &:active {
