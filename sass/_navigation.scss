@@ -68,6 +68,7 @@
 
         @include respond(small) {
             margin-bottom: 1rem;
+            padding: 1rem;
         }
 
         @include respond(small-2) {
@@ -93,6 +94,8 @@
 
             @include respond(small) {
                 font-size: 3rem;
+
+                letter-spacing: 0;
             }
 
             @include respond(small-2) {
